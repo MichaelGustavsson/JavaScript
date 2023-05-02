@@ -1,0 +1,28 @@
+#movie-details .details-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin: 3rem 0 2rem;
+}
+
+#movie-details img {
+  width: 400px;
+  height: 100%;
+  object-fit: cover;
+}
+
+#movie-details p {
+  margin: 1.25rem 0;
+}
+
+.rating {
+  color: var(--secondary-color);
+}
+
+@media (min-width: 768px) {
+  #movie-details .details-top {
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,42 @@
+header {
+  position: sticky;
+  top: 0;
+  padding: 1.25rem 0;
+  background: var(--navbar-background-color);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.25rem;
+}
+
+header .logo {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+header ul {
+  display: flex;
+}
+
+header ul li {
+  margin-left: 1.25rem;
+}
+
+header ul li a {
+  font-size: 1rem;
+}
+
+header ul li a:hover {
+  color: var(--secondary-color);
+  border-bottom: solid 1px var(--secondary-color);
+}
+
+.active {
+  color: var(--secondary-color);
+  border-bottom: solid 1px var(--secondary-color);
+  font-weight: 400;
+}

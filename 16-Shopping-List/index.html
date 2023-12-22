@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/55174c58a9.js"
+      crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="site.css" />
+    <title>Inköpslista</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img
+          src="images/notepad.png"
+          alt="notepad" />
+        <h1
+          id="app-title"
+          class="page-title">
+          Inköps Lista
+        </h1>
+      </header>
+      <!-- Nytt element för felmeddelanden... -->
+      <section class="message-container"></section>
+      <form id="item-form">
+        <div class="form-control">
+          <input
+            type="text"
+            class="form-input"
+            id="item-input"
+            name="item"
+            placeholder="Ange vara" />
+        </div>
+        <div class="form-control">
+          <button
+            type="submit"
+            class="btn btn-primary">
+            <i class="fa-solid fa-plus"></i> Lägg till
+          </button>
+        </div>
+      </form>
+
+      <div class="filter">
+        <input
+          type="text"
+          class="form-input-filter"
+          id="filter"
+          placeholder="Sök" />
+      </div>
+
+      <ul
+        id="item-list"
+        class="items"></ul>
+
+      <button
+        id="clear"
+        class="btn-clear">
+        Töm Allt
+      </button>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -50,6 +50,10 @@ header img {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
 
+.edit-mode {
+  color: #bbb;
+}
+
 .error-message {
   background: #f54747;
   color: #f4f4f4;
@@ -107,6 +111,15 @@ header img {
   color: #333;
 }
 
+.btn-edit {
+  background-color: #4d944d;
+}
+
+.btn-edit:hover {
+  background-color: #79a579;
+  color: #333;
+}
+
 .btn-link {
   font-size: 16px;
   background-color: transparent;
@@ -153,4 +166,5 @@ header img {
   padding: 10px 15px;
   margin: 0 5px 20px;
   font-weight: 400;
+  cursor: pointer;
 }

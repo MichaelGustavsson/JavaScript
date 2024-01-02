@@ -12,6 +12,13 @@ const list = document.querySelector('#item-list');
 const clearButton = document.querySelector('#clear');
 // Få en referens till filter inmatningen...
 const filterInput = document.querySelector('#filter');
+// Hämta in referensen till submit knappen
+// syftet är att kunna manipulera dess utseende...
+const saveButton = form.querySelector('button');
+
+// Skapa en variabel som hålla reda på om vi ändrar en befintlig vara...
+// isInEditMode är en mutable variabel...
+let isInEditMode = false;
 
 // Starta applikationen med rätt inställningar...
 const initApp = () => {
@@ -37,6 +44,15 @@ const handleAddGrocery = (e) => {
     return;
   }
 
+  if (isInEditMode) {
+    const groceryToUpdate = list.querySelector('.edit-mode');
+    console.log(groceryToUpdate);
+    // 1. Ta bort vald vara ifrån localStorage...
+    removeFromStorage(groceryToUpdate.textContent);
+    // 2. Ta bort elementet ifrån ul listan...
+    groceryToUpdate.remove();
+  } else {
+  }
   // Spara ner till localstorage...
   addToStorage(grocery);
   updateUI();
@@ -50,9 +66,26 @@ const handleClearList = () => {
 const handleClickGrocery = (e) => {
   if (e.target.parentElement.classList.contains('btn-link')) {
     removeFromStorage(e.target.parentElement.parentElement.textContent);
+    updateUI();
+  } else {
+    editGrocery(e.target);
   }
+};
 
-  updateUI();
+const editGrocery = (grocery) => {
+  isInEditMode = true;
+
+  list
+    .querySelectorAll('li')
+    .forEach((item) => item.classList.remove('edit-mode'));
+
+  // Ändra stil på submit knappen...
+  saveButton.classList.remove('btn-primary');
+  saveButton.classList.add('btn-edit');
+  saveButton.innerHTML = '<i class="fa-light fa-pen"></i> Uppdatera';
+
+  grocery.classList.add('edit-mode');
+  input.value = grocery.textContent;
 };
 
 const handleFilterGroceries = (e) => {

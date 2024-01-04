@@ -4,7 +4,7 @@ const state = {
 
 const listPopularMovies = async () => {
   const url = 'https://api.themoviedb.org/3/movie/popular';
-  const api_key = 'b6db108c656743b50fe39afcc3bffcc7';
+  const api_key = '<Add you own key here!>';
 
   const response = await fetch(`${url}?api_key=${api_key}&language=sv-SE`);
   const { results } = await response.json();

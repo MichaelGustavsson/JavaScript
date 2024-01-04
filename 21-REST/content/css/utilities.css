@@ -1,0 +1,62 @@
+/* Uitlities classes */
+.container {
+  max-width: 960px;
+  margin: auto;
+}
+
+.page-title {
+  color: #ef6c00;
+}
+
+.bg-dark {
+  background: #333;
+  color: #fff;
+}
+
+.bg-light {
+  background-color: #d5d3d3;
+}
+
+.bg-primary {
+  background: #00796b;
+  color: #ffb74d;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: #fff;
+  background: #000;
+  padding: 0.5rem 1.25rem;
+  border: none;
+  outline: none !important;
+  cursor: pointer;
+}
+
+.btn-light {
+  background: #d5d3d3;
+  color: #333;
+}
+
+.btn:hover {
+  background: #e65100;
+  color: #333;
+}
+
+.box {
+  padding: 2.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+.box i {
+  margin-bottom: 1rem;
+}
+
+/* Media Queries */
+/* min-width:768px */
+@media (min-width: 768px) {
+  .btn {
+    font-size: 1rem;
+  }
+}

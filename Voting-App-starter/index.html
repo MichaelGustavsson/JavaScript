@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="site.css" />
+    <title>Favorit film</title>
+  </head>
+  <body>
+    <main>
+      <article class="container">
+        <h1>Favorit film</h1>
+        <section class="card">
+          <form id="vote-form">
+            <div class="form-controls">
+              <div class="form-control">
+                <input
+                  type="radio"
+                  name="vote-option"
+                  id="vote-option"
+                  value="Titanic" />
+                <label for="vote-option">Titanic</label>
+              </div>
+              <div class="form-control">
+                <input
+                  type="radio"
+                  name="vote-option"
+                  id="vote-option"
+                  value="Avatar" />
+                <label for="vote-option">Avatar</label>
+              </div>
+              <div class="form-control">
+                <input
+                  type="radio"
+                  name="vote-option"
+                  id="vote-option"
+                  value="JurassicWorld" />
+                <label for="vote-option">Jurassic World</label>
+              </div>
+              <div class="form-control">
+                <input
+                  type="radio"
+                  name="vote-option"
+                  id="vote-option"
+                  value="Gudfadern" />
+                <label for="vote-option">Gudfadern</label>
+              </div>
+            </div>
+            <input
+              id="vote"
+              type="submit"
+              value="Skicka"
+              class="btn btn-dark" />
+          </form>
+        </section>
+        <article>
+          <section id="result"></section>
+        </article>
+      </article>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

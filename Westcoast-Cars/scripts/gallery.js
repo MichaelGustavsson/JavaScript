@@ -1,4 +1,5 @@
 import { createCard, addImageClickHandler } from './dom.js';
+import HttpClient from './http.js';
 
 const gallery = document.querySelector('#vehicles-gallery');
 
@@ -16,12 +17,11 @@ async function initPage() {
 
 const loadVehicles = async () => {
   const url = 'http://localhost:3000/vehicles';
-  const response = await fetch(url);
-
-  if (response.ok) {
-    const result = await response.json();
-    return result;
-  }
+  // Skapat en instans av vår nya HttpClient class(http.js)...
+  const http = new HttpClient(url);
+  // Kom ihåg att invänta http.get metoden med await...
+  const vehicles = await http.get();
+  return vehicles;
 };
 
 document.addEventListener('DOMContentLoaded', initPage);

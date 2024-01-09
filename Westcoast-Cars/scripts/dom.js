@@ -33,7 +33,9 @@ const addImageClickHandler = (images) => {
     const vehicleId = image.getAttribute('id');
 
     image.addEventListener('click', () => {
-      alert(`Bilens id är ${vehicleId}, bilens bildkälla är: ${src}`);
+      // alert(`Bilens id är ${vehicleId}, bilens bildkälla är: ${src}`);
+      console.log(location);
+      location.href = `/pages/vehicle-details.html?id=${vehicleId}`;
     });
   });
 };

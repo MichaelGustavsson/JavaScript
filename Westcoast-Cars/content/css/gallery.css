@@ -18,14 +18,15 @@ main {
   border: solid 1px #ef6c00;
   background: #fff;
   min-width: 300px;
+
   border-radius: 0.5rem;
-  cursor: pointer;
 }
 
 .vehicle-image img {
   border-top-right-radius: 0.5rem;
   border-top-left-radius: 0.5rem;
   width: 100%;
+  cursor: pointer;
 }
 
 .vehicle-image p {

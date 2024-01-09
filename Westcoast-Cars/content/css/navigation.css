@@ -1,0 +1,132 @@
+header {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  opacity: 0.9;
+  background: #004d40;
+}
+
+nav {
+  padding: 0 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li.logo {
+  font-size: 1.6rem;
+}
+
+nav ul li.logo span {
+  color: #00796b;
+  /* color: #2196f3; */
+}
+
+nav ul li.toggle {
+  order: 1;
+}
+
+nav ul li.menu-item {
+  display: none;
+  width: 100%;
+  text-align: center;
+  order: 2;
+}
+
+nav ul li a {
+  display: block;
+  padding: 0.4rem 0.4rem;
+  color: #fff;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #ef6c00;
+}
+
+nav ul:has(li .menu-btn:checked) .menu-item {
+  display: block;
+}
+
+/* Draw the hamburger menu */
+nav ul li .menu-btn {
+  display: none;
+}
+
+nav ul li .menu-icon {
+  padding: 28px 20px;
+  cursor: pointer;
+}
+
+nav ul li .menu-icon .nav-icon {
+  background-color: #fff;
+  display: block;
+  height: 2px;
+  width: 18px;
+  position: relative;
+  transition: background-color 0.2s ease-out;
+}
+
+nav ul li .menu-icon .nav-icon:before,
+nav ul li .menu-icon .nav-icon:after {
+  background-color: #fff;
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+}
+
+nav ul .menu-icon .nav-icon:before {
+  top: -5px;
+}
+
+nav ul li .menu-icon .nav-icon:after {
+  top: 5px;
+}
+
+/* Animate the hamburger menu */
+nav ul li .menu-btn:checked ~ .menu-icon .nav-icon {
+  background: transparent;
+}
+
+nav ul li .menu-btn:checked ~ .menu-icon .nav-icon::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+nav ul li .menu-btn:checked ~ .menu-icon .nav-icon::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+/* MEDIA QUERIES */
+/* min-width: 768px */
+@media (min-width: 768px) {
+  nav ul {
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  nav ul li.menu-item {
+    display: block;
+    width: auto;
+  }
+
+  nav ul li.logo {
+    flex: 1;
+  }
+
+  nav ul li.toggle {
+    display: none;
+  }
+}

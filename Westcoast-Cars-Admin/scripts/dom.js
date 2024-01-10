@@ -27,6 +27,36 @@ const createVehicleInfo = (vehicle) => {
   return paragraph;
 };
 
+// createVehicleList som tar två argument
+// 1. listan av bilar
+// 2. Vilket element som vi ska addera bilarna till
+const createVehicleList = (vehicles, element) => {
+  // Loopa igenom alla bilar vehicles
+  // För varje bil skapa en div
+  // Den skapade diven skall läggas till element som vi skickade in
+  vehicles.forEach((vehicle) => {
+    const container = createDiv();
+    container.setAttribute('vehicleid', vehicle.id);
+    container.appendChild(createSpan(vehicle.manufacturer));
+    container.appendChild(createSpan(vehicle.model));
+    container.appendChild(createSpan(`Årsmodell ${vehicle.modelYear}`));
+    container.appendChild(createSpan(`Antal köra km ${vehicle.mileage}`));
+    element.appendChild(container);
+  });
+};
+
+const createDiv = () => {
+  // const div = document.createElement('div');
+  // return div;
+  return document.createElement('div');
+};
+
+const createSpan = (text) => {
+  const span = document.createElement('span');
+  span.innerText = text;
+  return span;
+};
+
 const addImageClickHandler = (images) => {
   images.forEach((image) => {
     const src = image.getAttribute('src');
@@ -39,4 +69,4 @@ const addImageClickHandler = (images) => {
   });
 };
 
-export { createCard, addImageClickHandler };
+export { createCard, addImageClickHandler, createVehicleList };

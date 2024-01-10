@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="/content/css/site.css" />
+    <link
+      rel="stylesheet"
+      href="/content/css/navigation.css" />
+    <link
+      rel="stylesheet"
+      href="/content/css/utilities.css" />
+    <link
+      rel="stylesheet"
+      href="/content/css/index.css" />
+    <link
+      rel="stylesheet"
+      href="/content/css/admin/index.css" />
+    <script
+      src="https://kit.fontawesome.com/55174c58a9.js"
+      crossorigin="anonymous"></script>
+    <script
+      type="module"
+      src="/scripts/vehicle-admin-list.js"></script>
+    <title>Administration</title>
+  </head>
+  <body class="grid-container">
+    <header>
+      <nav>
+        <div class="container">
+          <ul class="menu">
+            <li class="logo">
+              <a
+                class="logo-title"
+                href="/index.html"
+                ><span><i class="fa-solid fa-cars"></i></span> Westcoast Cars</a
+              >
+            </li>
+            <li class="toggle">
+              <input
+                class="menu-btn"
+                type="checkbox"
+                id="menu-btn" />
+              <label
+                class="menu-icon"
+                for="menu-btn"
+                ><span class="nav-icon"></span>
+              </label>
+            </li>
+
+            <li class="menu-item">
+              <a
+                class="active"
+                href="/admin/index.html"
+                >Lista bilar</a
+              >
+            </li>
+            <li class="menu-item">
+              <a href="/admin/add-vehicle.html">Lägg till bil</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <h1 class="page-title">Administration</h1>
+        <h2 class="page-sub-title">Aktuella bilar i lager</h2>
+        <section id="vehicles"></section>
+      </div>
+    </main>
+  </body>
+</html>

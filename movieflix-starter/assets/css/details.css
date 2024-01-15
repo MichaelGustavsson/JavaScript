@@ -1,7 +1,7 @@
 #movie-details .details-top {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   gap: 2rem;
   margin: 3rem 0 2rem;

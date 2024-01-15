@@ -1,0 +1,26 @@
+/* Utilities */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: var(--light-color);
+  background: transparent;
+  border: solid 1 var(--secondary-color);
+  outline: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+}
+
+.btn:disabled {
+  border-color: var(--disabled-color);
+  cursor: not-allowed;
+}
+
+.btn:disabled:hover {
+  background: transparent;
+  color: var(--light-color);
+}

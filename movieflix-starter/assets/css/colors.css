@@ -1,0 +1,11 @@
+:root {
+  --primary-color: #ff0000;
+  --secondary-color: #f1c40f;
+  --background-color: #000;
+  --primary-text-color: #f4f4f4;
+  --card-background-color: #00695c;
+  --card-hover-color: #00897b;
+  --light-color: #fff;
+  --disabled-color: #ccc;
+  --navbar-background-color: rgba(0, 0, 0, 0.8);
+}

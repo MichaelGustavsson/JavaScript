@@ -1,5 +1,6 @@
 import { state } from '../utilities/config.js';
 import AppManager from '../App/AppManager.js';
+import { createMovieListDisplay } from './domManager.js';
 
 const initApp = () => {
   switch (state.currentPage) {
@@ -15,11 +16,17 @@ const initApp = () => {
 
 const listPopularMovies = async () => {
   const movies = await new AppManager().listMovies();
-  console.log(movies);
+
+  movies.forEach((movie) => {
+    const card = createMovieListDisplay(movie);
+    document.querySelector('#top-movies').appendChild(card);
+  });
 };
 
 const showMovieDetails = async () => {
-  const movie = await new AppManager().findMovie(753342);
+  const movieId = location.search.split('=')[1];
+  console.log(movieId);
+  const movie = await new AppManager().findMovie(movieId);
   console.log(movie);
 };
 

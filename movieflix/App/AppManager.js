@@ -1,4 +1,5 @@
-import HttpClient from '../lib/http.js';
+import Movie from '../Models/Movie.js';
+import HttpClient from '../lib/Http.js';
 
 export default class AppManager {
   async listMovies() {
@@ -6,7 +7,18 @@ export default class AppManager {
       const http = new HttpClient();
       const result = await http.get('movie/popular');
 
-      return result.results;
+      // Loopa igenom resulatet och skapa ett nytt Movie
+      // objekt för varje film...
+      const movies = result.results.map((movie) => {
+        return new Movie(
+          movie.id,
+          movie.title,
+          movie.overview,
+          movie.release_date
+        );
+      });
+
+      return movies;
     } catch (error) {
       throw error;
     }
@@ -14,12 +26,17 @@ export default class AppManager {
 
   async findMovie(movieId) {
     try {
-      // Skapa ett objekt av typen HttpClient...
       const http = new HttpClient();
-      // Anropa get metoden på objektet http
-      // Skicka med resursen = '/movie/movieId'...
       const result = await http.get(`movie/${movieId}`);
-      return result;
+
+      const movie = new Movie(
+        result.id,
+        result.title,
+        result.overview,
+        result.release_date
+      );
+
+      return movie;
     } catch (error) {
       throw error;
     }

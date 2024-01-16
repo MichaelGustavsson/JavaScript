@@ -6,7 +6,6 @@ export default class HttpClient {
     try {
       const baseUrl = `${settings.BASE_URL}/${resource}`;
       const url = `${baseUrl}?api_key=${settings.API_KEY}&language=sv-SE`;
-      console.log(url);
       const response = await fetch(url);
 
       if (response.ok) {

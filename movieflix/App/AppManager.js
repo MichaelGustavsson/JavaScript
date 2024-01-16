@@ -14,7 +14,8 @@ export default class AppManager {
           movie.id,
           movie.title,
           movie.overview,
-          movie.release_date
+          movie.release_date,
+          movie.poster_path
         );
       });
 
@@ -33,7 +34,11 @@ export default class AppManager {
         result.id,
         result.title,
         result.overview,
-        result.release_date
+        result.release_date,
+        result.poster_path,
+        result.backdrop_path,
+        result.vote_average,
+        result.genres
       );
 
       return movie;

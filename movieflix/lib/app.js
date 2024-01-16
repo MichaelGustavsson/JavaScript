@@ -1,6 +1,10 @@
 import { state } from '../utilities/config.js';
 import AppManager from '../App/AppManager.js';
-import { createMovieListDisplay } from './domManager.js';
+import {
+  createMovieListDisplay,
+  createMovieOverlay,
+  createMovieDetails,
+} from './domManager.js';
 
 const initApp = () => {
   switch (state.currentPage) {
@@ -25,9 +29,12 @@ const listPopularMovies = async () => {
 
 const showMovieDetails = async () => {
   const movieId = location.search.split('=')[1];
-  console.log(movieId);
   const movie = await new AppManager().findMovie(movieId);
-  console.log(movie);
+  const backgroundImage = createMovieOverlay(movie.backgroundImage);
+  const details = createMovieDetails(movie);
+
+  document.querySelector('#movie-details').appendChild(backgroundImage);
+  document.querySelector('#movie-details').appendChild(details);
 };
 
 document.addEventListener('DOMContentLoaded', initApp);

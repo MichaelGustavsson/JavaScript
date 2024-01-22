@@ -35,7 +35,9 @@ birthDate = new Date(1990, 10, 17);
 
 // 7. med datum samt tid numeriskt
 birthDate = new Date(1990, 10, 17, 22, 15, 35);
-// console.log('BirtDate', birthDate);
+console.log('BirtDate', birthDate);
+console.log(birthDate.getFullYear());
+console.log(birthDate.getDate());
 
 // Metoder för att manipulera Date typen...
 // Static metoder
@@ -70,9 +72,9 @@ birthDate = new Date(1990, 10, 17, 22, 15, 35);
 // console.log(new Date(0));
 
 // Manipulera datum
-let invoiceDate = new Date();
-console.log('Faktura datum', invoiceDate);
+// let invoiceDate = new Date();
+// console.log('Faktura datum', invoiceDate);
 
-let paymentDate = new Date();
-paymentDate.setDate(invoiceDate.getDate() + 30);
-console.log(paymentDate);
+// let paymentDate = new Date();
+// paymentDate.setDate(invoiceDate.getDate() + 30);
+// console.log(paymentDate);

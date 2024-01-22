@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="./assets/css/main.css" />
+    <script
+      src="https://kit.fontawesome.com/55174c58a9.js"
+      crossorigin="anonymous"></script>
+    <script
+      type="module"
+      src="../dist/dom/movies-dom.js"
+      defer></script>
+    <title>MovieFlix | Filmer</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo"><a href="./index.html">MovieFlix</a></div>
+        <nav>
+          <ul>
+            <li>
+              <a
+                class="active"
+                href="./movies.html"
+                >Filmer</a
+              >
+            </li>
+            <li>
+              <a href="./tv-series.html">TV</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section
+        id="app-root"
+        class="container">
+        <form
+          id="searchForm"
+          method="post">
+          <div class="search">
+            <input
+              type="text"
+              name="searchInput"
+              id="searchInput"
+              placeholder="Sök..." />
+            <i class="fa-regular fa-magnifying-glass"></i>
+          </div>
+        </form>
+        <h2>Populära filmer</h2>
+        <div
+          id="top-movies"
+          class="grid">
+          <!-- Movies here... -->
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <span
+          class="navigation-btn"
+          id="gotoFirst"
+          ><i class="fa-solid fa-backward"></i></span
+        ><span
+          class="navigation-btn"
+          id="gotoPrevious"
+          ><i class="fa-solid fa-caret-left"></i
+        ></span>
+        <span>Sidan</span>
+        <span id="pageNo"></span>
+        <span>av</span>
+        <span id="pages"></span>
+        <span
+          class="navigation-btn"
+          id="gotoNext"
+          ><i class="fa-solid fa-caret-right"></i></span
+        ><span
+          class="navigation-btn"
+          id="gotoLast"
+          ><i class="fa-sharp fa-solid fa-forward"></i
+        ></span>
+      </div>
+    </footer>
+  </body>
+</html>

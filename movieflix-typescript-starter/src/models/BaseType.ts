@@ -7,4 +7,9 @@ export interface BaseType {
   original_language: string;
   overview: string;
   vote_average: number;
+  genres: [
+    {
+      name: string;
+    }
+  ];
 }

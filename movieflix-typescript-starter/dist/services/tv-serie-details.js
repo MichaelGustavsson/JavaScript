@@ -8,11 +8,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import { fetchData } from '../utilities/http.js';
-export function getMovie(id) {
+export function getSerie(id) {
     return __awaiter(this, void 0, void 0, function* () {
-        // const result = await fetchData('movie/' + id);
-        const result = yield fetchData(`movie/${id}`);
+        const result = yield fetchData('tv/' + id);
         return result;
-        // return await fetchData('movie/' + id)
     });
 }

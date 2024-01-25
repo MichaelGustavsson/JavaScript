@@ -37,6 +37,7 @@ async function listMovies(page: number = 1) {
   } else {
     result = await listAllMovies(page);
   }
+  console.log(result);
 
   displayMovies(result.results as [Movie]);
   displayPagination(result);

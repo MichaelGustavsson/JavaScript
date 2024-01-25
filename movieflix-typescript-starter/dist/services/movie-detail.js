@@ -7,21 +7,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { getMovie } from '../services/movie-detail.js';
-function initApp() {
-    findMovie();
-}
-function findMovie() {
+import { fetchData } from '../utilities/http.js';
+export function getMovie(id) {
     return __awaiter(this, void 0, void 0, function* () {
-        const id = location.search.split('=')[1];
-        // const result = await getMovie(parseInt(id))
-        const result = yield getMovie(+id);
-        console.log(result);
-        console.log(result.results);
-        // const test = result as unknown;
-        // const movie = test as Movie;
-        const movie = result;
-        console.log(movie);
+        const result = yield fetchData('movie/' + id);
+        // const result = await fetchData(`movie/${id}`);
+        return result;
+        // return await fetchData('movie/' + id)
     });
 }
-document.addEventListener('DOMContentLoaded', initApp);

@@ -39,6 +39,7 @@ function listMovies(page = 1) {
         else {
             result = yield listAllMovies(page);
         }
+        console.log(result);
         displayMovies(result.results);
         displayPagination(result);
     });

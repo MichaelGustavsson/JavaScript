@@ -1,0 +1,47 @@
+/* Gallery styles */
+body {
+  background: #00796b;
+}
+
+main {
+  padding: 1rem;
+}
+
+#vehicles-gallery {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.vehicle-image {
+  border: solid 1px #ef6c00;
+  background: #fff;
+  min-width: 300px;
+
+  border-radius: 0.5rem;
+}
+
+.vehicle-image img {
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  width: 100%;
+  cursor: pointer;
+}
+
+.vehicle-image p {
+  text-align: center;
+  font-style: italic;
+}
+
+@media (min-width: 768px) {
+  #vehicles-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  #vehicles-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

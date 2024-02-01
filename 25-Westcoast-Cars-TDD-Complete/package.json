@@ -1,0 +1,17 @@
+{
+  "name": "25-westcoast-cars-admin-tdd-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@testing-library/dom": "^9.3.4",
+    "happy-dom": "^13.3.8",
+    "vitest": "^1.2.2"
+  }
+}

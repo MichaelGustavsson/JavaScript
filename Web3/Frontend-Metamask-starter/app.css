@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,600;0,700;1,100;1,300;1,400;1,600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+}
+
+input {
+  padding: 0.5rem 0.4rem;
+  border: solid 1px #b2b2b2;
+  outline: none !important;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  height: 75px;
+  width: 100%;
+  background: rgb(245, 132, 32);
+  background: linear-gradient(90deg, rgba(245, 132, 32) 50%, rgba(119, 62, 26, 1) 100%);
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+  box-shadow: 1px 0px 16px 2px rgba(0, 0, 0, 0.8);
+}
+
+.top-bar h1 {
+  color: #f4f4f4;
+}
+
+.container {
+  margin: auto;
+  max-width: 1200px;
+  padding: 1rem 2rem;
+}
+
+.transactions-container > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.transactions-container span {
+  color: #4646f8;
+}
+.form-control {
+  margin-bottom: 1rem;
+}
+
+.form-control input[type='text'] {
+  width: 400px;
+}
+
+.btn {
+  border: 0;
+  background: #333;
+  color: #f4f4f4;
+  min-width: 150px;
+  font-size: 1rem;
+  line-height: 1.1;
+  white-space: nowrap;
+  text-decoration: none;
+  padding: 0.5rem 0.5rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary {
+  background: radial-gradient(circle, rgba(245, 132, 32, 1) 0%, rgba(119, 62, 26, 1) 100%);
+}

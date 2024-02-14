@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="./app.css" />
+    <script
+      src="app.js"
+      defer></script>
+    <title>Web3</title>
+  </head>
+  <body>
+    <header class="top-bar">
+      <h1>Block Explorer(MetaMask)</h1>
+    </header>
+    <main>
+      <div class="container">
+        <section>
+          <div class="form-control">
+            <input
+              type="text"
+              name="accountNumber"
+              id="accountNumber"
+              placeholder="Ange konto" />
+
+            <button
+              id="checkBalance"
+              class="btn btn-primary">
+              Kolla kontobalans
+            </button>
+            <div>
+              <span>Eth Balance</span>
+            </div>
+            <div
+              id="balance"
+              class="balance"></div>
+          </div>
+          <div class="form-control">
+            <input
+              type="text"
+              name="amount"
+              id="amount"
+              placeholder="Ange värde att överföra" />
+          </div>
+          <div class="form-control">
+            <input
+              type="text"
+              name="toAccountNumber"
+              id="toAccountNumber"
+              placeholder="Till konto" />
+          </div>
+          <div class="form-control">
+            <button
+              id="sendTx"
+              class="btn btn-primary">
+              Överför
+            </button>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

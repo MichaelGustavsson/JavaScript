@@ -1,0 +1,45 @@
+/* Navbar... */
+header {
+  position: sticky;
+  top: 0;
+  padding: 1.25rem 0;
+  background: $navbar-background-color;
+  z-index: 2;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.25rem;
+  }
+
+  .logo {
+    a {
+      color: $primary-color;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+  }
+
+  nav {
+    display: flex;
+    ul {
+      li {
+        margin-left: 1.25rem;
+        a {
+          font-size: 1rem;
+          &:hover {
+            color: $secondary-color;
+            font-weight: 500;
+            border-bottom: solid 1px $secondary-color;
+          }
+          &.active {
+            color: $secondary-color;
+            border-bottom: solid 1px $secondary-color;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}
